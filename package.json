@@ -1,0 +1,23 @@
+{
+  "name": "raspi-garage-door",
+  "version": "1.0.0",
+  "description": "Raspberry Pi Garage Door Controller",
+  "main": "raspi-garage-door.js",
+  "scripts": {
+    "test": "test-garage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "raspi-garage-door"
+  },
+  "keywords": [
+    "Pi",
+    "IoT",
+    "Home"
+  ],
+  "author": "Craig Traxler",
+  "license": "ISC",
+  "dependencies": {
+    "onoff": "^1.1.9"
+  }
+}
