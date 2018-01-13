@@ -6,7 +6,7 @@ events = require('events');
 
 
 //app deps
-var onoff = require('onoff');
+
 const GarageDoor = require('./raspi-garage-door').GarageDoor;
 
 /*

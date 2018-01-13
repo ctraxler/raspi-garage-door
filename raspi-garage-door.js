@@ -78,8 +78,6 @@ GarageDoor.prototype.emitCurrentState = function() {
     var openState = openSensor.readSync();
     var closedState = closedSensor.readSync();
 
-    console.log('openState: ' + openState);
-    console.log('closedState: ' + closedState);
 
     if ((openState === 1) && (closedState === 1)) {
       console.log('ERROR: Door sensed as open and closed');
@@ -98,9 +96,11 @@ GarageDoor.prototype.activateDoor = function() {
   Relay.writeSync(0);
   console.log('activating relay...');
   // wait ACTIVATION_LENGTH and open the relay
+  var that = this; 
   setTimeout(function(){
       Relay.writeSync(1);
       console.log('deactivating relay');
+      that.emit('endActivation');
     }, ACTIVATION_LENGTH);
 }
 
